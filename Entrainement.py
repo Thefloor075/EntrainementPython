@@ -1,5 +1,59 @@
 from math import *
 
+def hms(N):
+	L = [0,0,0]
+	while N!=0:
+		if N > 3600:
+			N -= 3600
+			L[0] += 1
+		elif N > 60
+			N -=60
+			L[1] += 1
+		elif N > 0
+			N -= 1
+			L[2] += 1
+	return L
+
+def mult(a):
+
+#comprend pas
+
+#T.D.2.
+
+def ordre(x,y,z):
+	if z%x == 0:	return True
+	else:	return False
+
+def max2(x,y):
+	if x > y:
+		return x
+	else:	return y
+
+def max3(x,y,z):
+	return max2(max2(x,y),z)
+
+def racine(a,b,c):
+	delta = b**2 - 4*a*c
+	if delta == 0:
+		return(-b/2*a)
+	elif delta > 0:
+		return [(-b + sqrt(delta)/(2*a)),(-b - sqrt(delta)/(2*a))]
+	else:
+		print("Pas de racine réel")
+
+
+def bissextile(annee):
+#FLEMME ..
+def function():
+	pass
+#Flemme Aussi .. 
+
+def date(jour,moi,annee):
+	L = [x for x in range(1,13)]
+	if moi in not L:
+		print("Cette composition de chiffre ne correspond a rien")
+
+
 def somme(liste):
 	s = 0
 	for i in range(len(liste)):
@@ -206,3 +260,61 @@ def tous_les_parfaits(N):
 		else:
 			n+=1
 	return L 
+
+""""""""""""""""""""""""""""""""""""""""""""""""
+
+#(Longueur d'un nombre) ecrire une fonction long(n)
+#qui étant donnée l'écriture decimale de l'netier 
+#naturel n = ap ..... ao retourne l'entier p
+
+def long(p):
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""
+
+def binaire(n):
+	L = []
+	while n!=0
+		if n%2 == 0:
+			L.append(0)
+			n /= 2
+		else:
+			L.append(1)
+			n //= 2
+	return L
+
+
+#T.D.8
+
+def fahrenheit(celsius):
+	return (9/5)*celsius + 32
+
+def ameliorer_fahrenheit(celsius):
+	return ((90/50)*celsius + 320)/10 #Partie entier a utiliser
+
+def inverse_fahrenheit(fahrenheit):
+	return  (fahrenheit - 32)*(5/9)
+
+def somme(n):
+	s = 0
+	for i in range(n+1):
+		s += i 
+	return s
+
+def som_car(n):
+	s = 0
+	for i in range(n+1):
+		s += i**2
+	return s
+
+def valid_som_car(n):
+	if som_car(n) == (1/6)*n*(n+1)*(2*n + 1)
+		return True
+	else:
+		return False
+
+def N2(n,m):
+	for i in range(n+1):
+		for j in range(m+1):
+			print([i,j])
+

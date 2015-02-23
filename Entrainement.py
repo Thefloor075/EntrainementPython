@@ -119,20 +119,21 @@ def seuil_som_car(M):
 def fact(n):
 	u = 1
 	while n!=0:
-		u*n
+		u *= n
 		n -= 1
 	return u 
 
 def est_fact(n):
 	u = 1
 	k = 1
-	while u/n!= 1:
-		if n%u == 0:
-			k += 1
-			u *= u
+	while n!= 1:
+		if n%k == 0:
+		    print(n,k,u)
+		    n /= k
+		    k += 1
 		else:
 			return False
-	return k 
+	return k-1 
 			
 def inverse(mct):
 	return mct[::-1]

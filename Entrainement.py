@@ -187,7 +187,7 @@ def puissance_rapide(a,n):
 		return a*puissance_rapide(a,(n-1)/2)**2
 
 def modulo(a,b):
-	while a > b:
+	while a >= b:
 		a -= b
 	return a 
 
@@ -203,10 +203,12 @@ def pgcd_liste(L):
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""
+from math import *
+
 def premiers(N):
-	n = 1
+	n = 2
 	L = []
-	while len(L)! = N:
+	while len(L)!= N:
 		if premier1(n) == True:
 			L.append(n)
 			n += 1
@@ -217,10 +219,11 @@ def premiers(N):
 
 def premier1(N):
 	racine = int(sqrt(N))
-	for i in range(racine + 1):
+	for i in range(2,racine + 1):
 		if N%i == 0:
 			return False
 	return True 
+
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 def decomp_premiers(N):
@@ -238,18 +241,21 @@ def decomp_premiers(N):
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 def nombre_parfait(n):
-	if diviseurs(n)/2 == n:
+	if sum(diviseurs(n)) == n:
 		return True
 	return False
 
 
 def diviseurs(n):
-	s = 0 
+	s = [1] 
 	racine = int(sqrt(n))
-	for i in range(racine + 1)
+	for i in range(2,racine + 1):
 		if n%i == 0:
-			s += n/i + n/(n/i)
+			s.append(n/i)
+			s.append(n/(n/i))
 	return s #A Verifier
+	
+	
 
 def tous_les_parfaits(N):
 	L = []
